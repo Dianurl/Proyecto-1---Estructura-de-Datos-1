@@ -33,7 +33,6 @@ public class TreeFuctions{
             System.out.println("No se encontro el cliente");
             return null;
         }
-
         if(id.equals(root.client.getId())){
             if(root.left == null && root.right == null){
                 root = null;

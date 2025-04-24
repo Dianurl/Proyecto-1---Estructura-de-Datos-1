@@ -1,7 +1,7 @@
 import com.sun.source.tree.Tree;
 
 public class Export {
-    public void exportarArbolTxt(String path, TreeNode IdAvl ,TreeNode IdBst, TreeNode NameBst,TreeNode LastNameBst,TreeNode PhoneBst,TreeNode EmailBst,TreeNode AddressBst,TreeNode BorndateBst,TreeNode ApodoBst, boolean id_Bst, boolean name_Bst, boolean lastName_Bst, boolean phone_Bst, boolean email_Bst, boolean address_Bst, boolean borndate_Bst, boolean apodo_Bst,boolean id_Avl,boolean name_Avl,boolean lastName_Avl,boolean phone_Avl,boolean email_Avl,boolean address_Avl,boolean borndate_Avl,boolean apodo_Avl){
+    public void exportarArbolTxt(String path, TreeNode IdAvl ,TreeNode IdBst, TreeNode NameBst,TreeNode LastNameBst,TreeNode PhoneBst,TreeNode EmailBst,TreeNode AddressBst,TreeNode BorndateBst,TreeNode ApodoBst, TreeNode NameAvl,TreeNode LastNameAvl,TreeNode PhoneAvl,TreeNode EmailAvl,TreeNode AddressAvl,TreeNode BorndateAvl,TreeNode ApodoAvl, boolean id_Bst, boolean name_Bst, boolean lastName_Bst, boolean phone_Bst, boolean email_Bst, boolean address_Bst, boolean borndate_Bst, boolean apodo_Bst,boolean id_Avl,boolean name_Avl,boolean lastName_Avl,boolean phone_Avl,boolean email_Avl,boolean address_Avl,boolean borndate_Avl,boolean apodo_Avl){
         String Namefile;
         ToTXT ObjToTXT = new ToTXT();
         //Creamos el txt de bst id
@@ -52,37 +52,37 @@ public class Export {
         //Creamos el txt de nombre avl
         if(name_Avl == true) {
             Namefile = "name-avl.txt";
-            ObjToTXT.convertTxt(NameBst, path, Namefile);
+            ObjToTXT.convertTxt(NameAvl, path, Namefile);
         }
         //Creamos el txt de apellido avl
         if(lastName_Avl == true) {
             Namefile = "lastName-avl.txt";
-            ObjToTXT.convertTxt(LastNameBst, path, Namefile);
+            ObjToTXT.convertTxt(LastNameAvl, path, Namefile);
         }
         //Creamos el txt de telefono avl
         if(phone_Avl == true) {
             Namefile = "phone-avl.txt";
-            ObjToTXT.convertTxt(PhoneBst, path, Namefile);
+            ObjToTXT.convertTxt(PhoneAvl, path, Namefile);
         }
         //Creamos el txt de email avl
         if(email_Avl == true) {
             Namefile = "email-avl.txt";
-            ObjToTXT.convertTxt(EmailBst, path, Namefile);
+            ObjToTXT.convertTxt(EmailAvl, path, Namefile);
         }
         //Creamos el txt de direccion avl
         if(address_Avl == true) {
             Namefile = "address-avl.txt";
-            ObjToTXT.convertTxt(AddressBst, path, Namefile);
+            ObjToTXT.convertTxt(AddressAvl, path, Namefile);
         }
         //Creamos el txt de fecha de nacimiento avl
         if(borndate_Avl == true) {
             Namefile = "borndate-avl.txt";
-            ObjToTXT.convertTxt(BorndateBst, path, Namefile);
+            ObjToTXT.convertTxt(BorndateAvl, path, Namefile);
         }
         //Creamos el txt de apodo avl
         if(apodo_Avl == true) {
             Namefile = "apodo-avl.txt";
-            ObjToTXT.convertTxt(ApodoBst, path, Namefile);
+            ObjToTXT.convertTxt(ApodoAvl, path, Namefile);
         }
 
     }

@@ -5,10 +5,9 @@ import java.util.List;
 public class ToTXT {
     public String ClientTexto;
     public void convertTxt(TreeNode root, String path, String name) {
-        ClientTexto = "[";
+        ClientTexto = "";
         File file = new File(path+name);
         recorridoPorNiveles(root);
-        ClientTexto += "]";
         try {
             file.createNewFile();
             java.io.FileWriter fw = new java.io.FileWriter(file);//Abrimos el archivo
@@ -34,13 +33,21 @@ public class ToTXT {
     }
 
     public void recorridoPorNiveles(TreeNode root) {
+        ClientTexto = ""; // Inicializamos ClientTexto aquí para asegurarnos de que esté vacío al inicio
+        if (root == null) {
+            return; // Si el árbol está vacío, no hacemos nada
+        }
+
         int altura = Altura(root);
+        List<String> allLevels = new ArrayList<>();
         for (int i = 1; i <= altura; i++) {
             List<String> nivelActual = new ArrayList<>();
             PorNivel(root, i, nivelActual);
-            ClientTexto += String.join(",", nivelActual) ;
+            allLevels.addAll(nivelActual);
         }
+        ClientTexto = String.join(",", allLevels);
     }
+
     private int Altura(TreeNode root)
     {
         if(root!=null)

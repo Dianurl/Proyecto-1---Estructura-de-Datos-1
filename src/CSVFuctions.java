@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 
 public class CSVFuctions {
     String TextoCSV;
@@ -7,11 +8,10 @@ public class CSVFuctions {
     {
         try (FileWriter writer = new FileWriter(path)) {
             // Escribir encabezado (fila 1, columnas)
-            writer.append("ID,Nombre,Apellido,Telefono,Email,Direccion,Fecha de Nacimiento,Apodo\n");
+            writer.append("ID,Nombre,Apellido,Apodo,Telefono,Email,Direccion,Fecha de Nacimiento\n");
             CrearCSV(root);
             // Escribir filas con datos (cada fila es una línea nueva)
             writer.append(TextoCSV);
-
             System.out.println("Archivo CSV creado correctamente.");
         } catch (IOException e) {
             e.printStackTrace();
