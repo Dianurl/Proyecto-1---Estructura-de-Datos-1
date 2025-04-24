@@ -44,8 +44,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);//Funciona para imprimir en consola con intelliji ya que que generalmente si se usa el de java retorna null
         //Directorios
-        String Pathtxt = "C:\\Users\\conra\\OneDrive\\Documentos\\Poryecto Estructura de datos\\";
-        String Pathcsv = "C:\\Users\\conra\\OneDrive\\Documentos\\Poryecto Estructura de datos\\";
+        String Pathtxt = "C:\\Users\\DELL\\Desktop\\Dian\\Diego URL Semestre 3\\Documentos Proyecto 1 Estructura de Datos\\";
+        String Pathcsv = "C:\\Users\\DELL\\Desktop\\Dian\\Diego URL Semestre 3\\Documentos Proyecto 1 Estructura de Datos\\";
 
         //Objetos de exportacion e importacion
         Export ObjExport = new Export();
